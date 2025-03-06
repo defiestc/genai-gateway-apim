@@ -192,7 +192,5 @@ output API_VERSION string = openAiApiVersion
 output APIM_ENDPOINT string = 'https://${apim.outputs.apimServiceName}.azure-api.net'
 output API_SUFFIX string = api.outputs.apiSuffix
 output SUBSCRIPTION_KEY string = api.outputs.subscriptionKey
-output openai1_lowercase_endpoint string = openai1.outputs.endpoint
 output openAi1_uppercase_endpoint string = openAi1.outputs.endpoint
-output openai2_lowercase_endpoint string = openai2.outputs.endpoint
 output openAi2_uppercase_endpoint string = openAi2.outputs.endpoint
