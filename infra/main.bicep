@@ -45,7 +45,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 
 // FIRST: creating Azure Cognitive Services account for OpenAI
 module openAi1 'core/ai/cognitiveservices.bicep' = {
-  name: 'openai1'
+  name: 'openAi1'
   scope: resourceGroup
   params: {
     name: '${abbrs.cognitiveServicesAccounts}${resourceToken}-${apimName}-AOAI1'
@@ -77,7 +77,7 @@ module openAi1 'core/ai/cognitiveservices.bicep' = {
 
 // SECOND: creating Azure Cognitive Services account for OpenAI
 module openAi2 'core/ai/cognitiveservices.bicep' = {
-  name: 'openai2'
+  name: 'openAi2'
   scope: resourceGroup
   params: {
     name: '${abbrs.cognitiveServicesAccounts}${resourceToken}-${apimName}-AOAI2'
