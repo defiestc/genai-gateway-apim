@@ -45,7 +45,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 
 // FIRST: creating Azure Cognitive Services account for OpenAI
 module openAi1 'core/ai/cognitiveservices.bicep' = {
-  name: 'openAi1'
+  name: 'openai1'
   scope: resourceGroup
   params: {
     name: '${abbrs.cognitiveServicesAccounts}${resourceToken}-${apimName}-AOAI1'
@@ -77,7 +77,7 @@ module openAi1 'core/ai/cognitiveservices.bicep' = {
 
 // SECOND: creating Azure Cognitive Services account for OpenAI
 module openAi2 'core/ai/cognitiveservices.bicep' = {
-  name: 'openAi2'
+  name: 'openai2'
   scope: resourceGroup
   params: {
     name: '${abbrs.cognitiveServicesAccounts}${resourceToken}-${apimName}-AOAI2'
@@ -192,3 +192,7 @@ output API_VERSION string = openAiApiVersion
 output APIM_ENDPOINT string = 'https://${apim.outputs.apimServiceName}.azure-api.net'
 output API_SUFFIX string = api.outputs.apiSuffix
 output SUBSCRIPTION_KEY string = api.outputs.subscriptionKey
+output openai1_endpoint string = openai1.outputs.endpoint
+output openAi1_endpoint string = openAi1.outputs.endpoint
+output openai2_endpoint string = openai2.outputs.endpoint
+output openAi2_endpoint string = openAi2.outputs.endpoint
