@@ -33,7 +33,7 @@ resource backend1 'Microsoft.ApiManagement/service/backends@2023-09-01-preview' 
   parent: apimService
   name: 'backend1'
   properties: {
-    url: '${openai1Endpoint}/openai'
+    url: '${openai1Endpoint}openai'
     protocol: 'http'
     circuitBreaker: {
       rules: [
@@ -64,7 +64,7 @@ resource backend2 'Microsoft.ApiManagement/service/backends@2023-09-01-preview' 
   parent: apimService
   name: 'backend2'
   properties: {
-    url: '${openai2Endpoint}/openai'
+    url: '${openai2Endpoint}openai'
     protocol: 'http'
     circuitBreaker: {
       rules: [
