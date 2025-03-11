@@ -61,10 +61,8 @@ module openAi1 'core/ai/cognitiveservices.bicep' = {
         raiPolicyName: 'Microsoft.Default'
         model: {
           format: 'OpenAI'
-          // name: 'gpt-35-turbo'
-          // version: '0613'
-          name: 'gpt-4o-mini'
-          version: '2024-07-18'
+          name: 'gpt-35-turbo'
+          version: '0125'
         }
         sku: {
           name: 'Standard'
@@ -93,10 +91,8 @@ module openAi2 'core/ai/cognitiveservices.bicep' = {
         raiPolicyName: 'Microsoft.Default'
         model: {
           format: 'OpenAI'
-          // name: 'gpt-35-turbo'
-          // version: '0613'
-          name: 'gpt-4o-mini'
-          version: '2024-07-18'
+           name: 'gpt-35-turbo'
+           version: '0125'
         }
         sku: {
           name: 'Standard'
